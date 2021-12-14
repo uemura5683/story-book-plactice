@@ -1,0 +1,99 @@
+footer.l-footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: var(--black);
+  margin: 20px 0 0;
+}
+footer.l-footer .l-foonter-top {
+  width: 100%;
+  padding: 20px;
+}
+footer.l-footer .l-foonter-top {
+  display: flex;
+  flex-wrap: wrap; 
+}
+footer.l-footer .l-foonter__address {width: 50%;}
+footer.l-footer .l-foonter__address a{
+  display: block;
+  margin: 0 0 10px;
+}
+footer.l-footer .l-foonter__address a img{
+  width: auto;
+  height: 60px;
+  background: var(--white);
+  padding: 10px;
+}
+footer.l-footer .l-foonter__address p {
+  color: var(--white);
+  line-height: 2;
+}
+
+footer.l-footer .l-foonter__navi {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer.l-footer .l-foonter__navi:before,
+footer.l-footer .l-foonter__navi:after {
+  content: none;
+}
+footer.l-footer .l-foonter__list {
+ padding: 0;
+ width: 50%;
+}
+footer.l-footer .l-foonter__list li {
+  display: block;
+  gap: 10px;
+}
+footer.l-footer .l-foonter__list li a{color: var(--white);}
+
+footer.l-footer .l-foonter__copyright {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 20px;
+  border-top: 1px solid var(--white);
+}
+footer.l-footer .l-foonter__copy {
+  color: var(--white);
+}
+footer.l-footer .l-foonter__copy a {
+  color: var(--white);
+}
+
+footer.l-footer [href*="top"] {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  inset: calc(100% - 60px) 0 0 calc(100% - 60px);
+  background: var(--black);
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+footer.l-footer [href*="top"]:before {
+  content: '';
+  border: 1px solid var(--white);
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  inset: 50%;
+  transform:translate(-50%, 0) rotate(-45deg);
+}
+@supports not (inset: 20px 0 0 calc(100% - 200px)) {
+footer.l-footer [href*="top"] {
+  top: calc(100% - 60px);
+  left: calc(100% - 60px);
+}
+}
+@supports not (inset: 50%;) {
+footer.l-footer [href*="top"]:before {
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%) rotate(-45deg);
+}
+}

@@ -1,5 +1,6 @@
-import './page.css';
+import './../css/page.css';
 import { createHeader } from './Header';
+import { createFooter } from './Footer.html';
 
 export const createPage = ({ user, onLogout, onLogin, onCreateAccount }) => {
   const article = document.createElement('article');
