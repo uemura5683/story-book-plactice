@@ -1,3 +1,7 @@
+:root {
+  --black: #333;
+  --white: #fff;
+}
 footer.l-footer {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +32,6 @@ footer.l-footer .l-foonter__address p {
   color: var(--white);
   line-height: 2;
 }
-
 footer.l-footer .l-foonter__navi {
   display: flex;
   flex-wrap: wrap;
@@ -48,8 +51,9 @@ footer.l-footer .l-foonter__list li {
   display: block;
   gap: 10px;
 }
-footer.l-footer .l-foonter__list li a{color: var(--white);}
-
+footer.l-footer .l-foonter__list li a{
+  color: var(--white);
+}
 footer.l-footer .l-foonter__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -62,38 +66,4 @@ footer.l-footer .l-foonter__copy {
 }
 footer.l-footer .l-foonter__copy a {
   color: var(--white);
-}
-
-footer.l-footer [href*="top"] {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  inset: calc(100% - 60px) 0 0 calc(100% - 60px);
-  background: var(--black);
-  border: 1px solid var(--white);
-  border-radius: 50%;
-}
-footer.l-footer [href*="top"]:before {
-  content: '';
-  border: 1px solid var(--white);
-  border-left-width: 0px;
-  border-bottom-width: 0px;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  inset: 50%;
-  transform:translate(-50%, 0) rotate(-45deg);
-}
-@supports not (inset: 20px 0 0 calc(100% - 200px)) {
-footer.l-footer [href*="top"] {
-  top: calc(100% - 60px);
-  left: calc(100% - 60px);
-}
-}
-@supports not (inset: 50%;) {
-footer.l-footer [href*="top"]:before {
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%) rotate(-45deg);
-}
 }

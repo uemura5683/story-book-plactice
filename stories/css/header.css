@@ -1,3 +1,6 @@
+header {
+  position: relative;
+}
 .wrapper {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -5,22 +8,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
 }
+/**
+* drawer
+**/
 
-svg {
-  display: inline-block;
-  vertical-align: top;
+/**
+* logo
+**/
+.l-header-logo {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-
-h1 {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 1;
-  margin: 6px 0 6px 10px;
-  display: inline-block;
-  vertical-align: top;
+.l-header-logo .l-header-logo_link {
+  display: block;
 }
-
-button + button {
+.l-header-logo .l-header-logo_img {
+  height: 60px;
+  width: auto;
+}
+/**
+* button
+**/
+.l-header-button {
+  margin-left: auto;
+}
+.l-header-button button + button {
   margin-left: 10px;
 }
