@@ -1,0 +1,37 @@
+:root {
+  --black: #333;
+  --gray: #666;
+  --white: #fff;
+}
+
+.c-breadcrumb {
+}
+.c-breadcrumb_inner {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.c-breadcrumb_item {
+  margin: 0 2rem 0 0;
+  position: relative;
+}
+.c-breadcrumb_item:after {
+  content: '';
+  position: absolute;
+  border: 0px solid var(--gray);
+  border-left-width: 2px;
+  border-top-width: 2px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  transform: rotate(135deg) translate(-50%);
+  top: 50%;
+  right: -1rem;
+}
+.c-breadcrumb_item:last-child:after {
+  content: none;
+}
+.c-breadcrumb_item a {
+  color: var(--gray);
+}
