@@ -1,4 +1,4 @@
-import { createAlert } from './template/alert';
+import { createAlert } from './template/Alert';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {

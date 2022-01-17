@@ -1,4 +1,4 @@
-import { createnav } from './template/nav';
+import { createnav } from './template/Nav';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {

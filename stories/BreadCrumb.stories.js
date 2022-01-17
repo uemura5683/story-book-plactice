@@ -1,4 +1,4 @@
-import { createbreadcrumb } from './template/breadcrumb';
+import { createbreadcrumb } from './template/Breadcrumb';
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {

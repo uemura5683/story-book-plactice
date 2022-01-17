@@ -35,6 +35,11 @@ Secondary.args = {
   label: 'Button',
 };
 
+export const Hover = Template.bind({});
+Hover.args = {
+  label: 'Button',
+};
+
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',

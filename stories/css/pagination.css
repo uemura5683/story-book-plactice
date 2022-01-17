@@ -1,0 +1,31 @@
+:root {
+  --black: #333;
+  --gray: #666;
+  --white: #fff;
+}
+.c-pagination {
+  margin: 2rem;
+}
+.c-pagination__inner {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+.c-page-item {
+  list-style-type: none;
+}
+.c-page-link {
+  position: relative;
+  display: block;
+  color: var(--gray);
+  text-decoration: none;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
+}
+.c-pagination-active .c-page-item:nth-of-type(2) .c-page-link,
+.c-pagination-prev-active .c-page-prev,
+.c-pagination-next-active .c-page-next {
+  background-color: var(--black);
+  color: var(--white);
+}

@@ -5,10 +5,11 @@
   cursor: pointer;
   display: inline-block;
   line-height: 1;
+  width: 200px;
 }
 .storybook-button--primary {
   color: white;
-  background-color: #1ea7fd;
+  background-color: #333;
 }
 .storybook-button--secondary {
   color: #333;
@@ -18,6 +19,7 @@
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;
+  width: 100px;
 }
 .storybook-button--medium {
   font-size: 14px;
@@ -26,4 +28,5 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+  width: 300px;
 }

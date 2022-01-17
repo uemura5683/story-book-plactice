@@ -1,0 +1,65 @@
+:root {
+  --black: #333;
+  --gray: #666;
+  --white: #fff;
+}
+.c-slider {
+    overflow: hidden;
+    aspect-ratio: 3 / 1.5;
+    width: 100%;
+    position: relative;
+}
+.c-slider ol {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.c-slider ol li {
+    background-size: 100%;
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    top: -50%;
+    transform: translatey(50%);
+}
+.c-slider ol li .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+@media (hover: hover) {
+  .c-slider ol li .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .c-slider ol li:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .c-slider ol li  {
+    animation-name: none;
+  }
+}
+@supports not (aspect-ratio: 3 / 1.5) {
+  .c-slider {
+    padding: 50% 0 0;
+  }
+}
+.c-slider ol li:hover .carousel__snapper,
+.c-slider ol li:focus-within .carousel__snapper {
+  animation-name: none;
+}

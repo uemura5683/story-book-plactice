@@ -13,7 +13,7 @@ export const createbreadcrumb = ({
   `;
   nav.insertAdjacentHTML('afterbegin', breasbrumb);
 
-  nav.className = ['c-breadbrumb'].join(' ');
+  nav.className = ['c-breadcrumb'].join(' ');
 
   return nav;
 };
