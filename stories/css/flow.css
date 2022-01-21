@@ -1,0 +1,55 @@
+:root {
+  --black: #333;
+  --gray: #666;
+  --white: #fff;
+}
+::marker {
+  font-size: 0;
+}
+.action-steps{
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.action-steps li {
+  padding: 10px 0;
+  margin-right: 0.5% !important;
+  text-align: center;
+  border: 1px solid var(--gray);
+  box-sizing: border-box;
+}
+.action-steps li.last {
+  margin-right: 0 !important;
+}
+.action-steps li.active {
+  background: var(--gray);
+  color: var(--white);
+}
+.action-steps li span.number {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.action-steps.step2{
+  list-style: none;
+}
+.action-steps.step2 li {
+  width: 49.7%;
+}
+.action-steps.step3 li {
+  width: 32%;
+}
+.action-steps.step4 li {
+  width: 24.6%;
+}
+.action-steps.step6 li {
+  width: 32%;
+  float: left;
+  margin-right: 0;
+  margin-bottom: 1px;
+  border-right: 0;
+  border-left: solid 1px var(--white);
+}
+.action-steps.step6 li:nth-child(3n+1) {
+  border-left: 0;
+}

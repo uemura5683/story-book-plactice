@@ -1,10 +1,12 @@
 .c-alert {
   position: relative;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  width: 100%;
+  width: calc(100% - 2rem);
+  display: block;
+  font-size: 12px;
 }
 .c-alert-primary {
   color: #084298;
