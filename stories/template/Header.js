@@ -33,13 +33,7 @@ export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
     account.appendChild(createButton({ size: 'small', label: 'Log out', onClick: onLogout }));
   } else {
     account.appendChild(createButton({ size: 'small', label: 'Log in', onClick: onLogin }));
-    account.appendChild(
-      createButton({
-        size: 'small',
-        label: 'Sign up',
-        onClick: onCreateAccount,
-        primary: true,
-      })
+    account.appendChild(createButton({size: 'small', label: 'Sign up', onClick: onCreateAccount, primary: true})
     );
   }
   wrapper.appendChild(account);
