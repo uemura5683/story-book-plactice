@@ -1,0 +1,38 @@
+:root {
+  --black: #333;
+  --gray: #666;
+  --white: #fff;
+}
+::marker {
+  font-size: 0;
+}
+.c-list {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-top: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+}
+.c-list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--black);
+  text-decoration: none;
+  background-color: #fff;
+  border-left: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+.c-list-group-item.active {
+  z-index: 2;
+  color: var(--white);
+  background-color: var(--gray);
+  border-color: var(--gray);
+}
+.c-list-group-item:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
