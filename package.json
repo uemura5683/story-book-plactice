@@ -1,23 +1,72 @@
 {
-  "name": "stories-book",
+  "name": "learnstorybook",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-css": "lessc src/style/index.less src/index.css",
+    "watch-css": "npm run build-css && grunt",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
-    "@storybook/addon-links": "^6.4.9",
-    "@storybook/html": "^6.4.9",
-    "babel-loader": "^8.2.2"
+    "@storybook/addon-actions": "^6.4.8",
+    "@storybook/addon-essentials": "^6.4.8",
+    "@storybook/addon-interactions": "^6.4.8",
+    "@storybook/addon-links": "^6.4.8",
+    "@storybook/addon-storyshots": "^6.4.8",
+    "@storybook/node-logger": "^6.4.8",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.4.8",
+    "@storybook/testing-library": "^0.0.7",
+    "@storybook/testing-react": "^1.2.2",
+    "chromatic": "^6.2.0",
+    "grunt": "^1.4.1",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "less": "^4.1.2",
+    "react-test-renderer": "^17.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^2.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
